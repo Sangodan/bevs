@@ -1,3 +1,94 @@
-p {
-    color: brown;
+@property --primary-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #4169e1;
+}
+
+@property --secondary-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ADD8E6;
+}
+
+@property --tertiary-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #FFD700;
+}
+
+html, body {
+    height: 100%;
+    overflow-y: hidden;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header {
+    border-bottom: 2px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 0 20px 0 20px;
+}
+
+#navbar {
+    display: flex;
+    list-style: none;
+}
+
+#navbar li {
+    padding: 10px;
+    flex-grow: 1;
+    color: white;
+    text-align: center;
+    border: 2px solid var(--secondary-color);
+}
+
+main {
+    flex-grow: 1;
+    padding: 0 20px 0 20px;
+    overflow-y: auto;
+}
+
+#gamelist {
+    display: grid;
+    list-style: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.game {
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--tertiary-color);
+    text-align: center;
+}
+
+.game img {
+    width: 100%;
+    height: auto;
+}
+
+.game p {
+    color: var(--primary-color);
+    border-top: 2px solid black;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+footer {
+    border-top: 2px solid var(--tertiary-color);
+    padding: 0 20px 0 20px;
+}
+
+#copyright {
+    text-align: right;
+}
+
+#title {
+    color: white;
+    text-align: center;
 }
